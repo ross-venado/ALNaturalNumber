@@ -123,7 +123,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 case MULTIPLICACION:
                 case DIVISION:
                 case IGUAL:
-                    resultado += lexer.lexeme + ": Es un " + tokens + "\n";
+                    resultado += lexer.yytext() + ": Es un " + tokens + "\n";
                     break;
                 default:
                     resultado += "Token: " + tokens + "\n";

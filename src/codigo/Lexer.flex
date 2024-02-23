@@ -12,7 +12,7 @@ import static codigo.Tokens.*;
 
 // Reglas léxicas
 [+]{1}         { return SUMA; }
-[-]{1}         { return RESTA; }
+"-" | "\u2013" { return RESTA; }
 [*]{1}         { return MULTIPLICACION; }
 [/]{1}         { return DIVISION; }
 "="            { return IGUAL; }
