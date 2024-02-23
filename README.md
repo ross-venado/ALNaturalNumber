@@ -1,3 +1,11 @@
+# Lexer.flex
+## Grupo Numero 5
+
+Explicación de la expresión regular
+
+---
+
+```jflex
 package codigo;
 import static codigo.Tokens.*;
 
@@ -18,7 +26,9 @@ import static codigo.Tokens.*;
 // Reconoce tanto el guion normal (-) como el en dash (–, \u2013) y retorna el token RESTA.
 // Esto asegura que el lexer pueda manejar la entrada independientemente de si se utilizó un guion normal o un en dash.
 "-" | "\u2013" { return RESTA; }
+```
 
+```jflex
 // Reconoce el símbolo de multiplicación (*) y retorna el token MULTIPLICACION.
 [*]{1}         { return MULTIPLICACION; }
 
@@ -27,7 +37,9 @@ import static codigo.Tokens.*;
 
 // Reconoce el símbolo de igualdad (=) y retorna el token IGUAL.
 "="            { return IGUAL; }
+```
 
+```jflex
 // Reconoce cualquier secuencia de una o más letras (mayúsculas o minúsculas) como una VARIABLE.
 // Esto permite identificar nombres de variables en el código.
 [a-zA-Z]+      { return VARIABLE; }
@@ -51,3 +63,6 @@ import static codigo.Tokens.*;
 // Captura cualquier otro carácter que no coincida con las reglas anteriores y retorna el token ERROR.
 // Esto es útil para identificar caracteres inesperados o no permitidos en el análisis.
 .              { return ERROR; }
+
+```
+
